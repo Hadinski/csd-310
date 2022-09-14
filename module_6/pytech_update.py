@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+import pprint
 
 #https://github.com/Hadinski/csd-310
 
@@ -11,12 +12,15 @@ pytech = mydb['pytech']
 
 mycollection = mydb.students
 
+print('Student documents from find() query: \n')
+
 for document in mycollection.find():
-    print(document)
+    pprint.pprint(document)
 
 filter = {'student_ID': '1007'}
 newValues = {"$set": {'last_name': 'not_Hurst'}}
 mycollection.update_one(filter, newValues)
 
+print('\nStudent document 1007: \n')
 result = mycollection.find_one({'student_ID': '1007'})
-print(result)
+pprint.pprint(result)
