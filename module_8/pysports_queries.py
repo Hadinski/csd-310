@@ -45,7 +45,7 @@ try:
         print('Player ID: {}'.format(player[0]),
             '\nFirst Name: {}'.format(player[1]),
             '\nLast Name: {}'.format(player[2]),
-            '\nTeam ID: {}\n'.format(player[3]))
+            '\nTeam Name: {}\n'.format(player[3]))
 
     print('\n Press any key to continue...')
 
